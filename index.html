@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"><link rel="icon" href="./logo.jpg">
+    <link rel="stylesheet" href="cake.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> <style>
+        html
+{
+    scroll-behavior: smooth;
+}
+
+
+body
+{
+    background:whitesmoke;
+}
+::selection
+{
+    background: violet;
+    color: aqua;
+}
+#container
+{
+    position: relative;
+    background: rgba(245, 222, 179, 0.86);
+    width: 1360px;
+    height: 65px;
+    left: -30px;
+    top: -5px;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+ul
+{
+   margin-left: 22.5%;
+   display: flex;
+   list-style: none;
+}
+li::before
+{
+    content: "";
+    position: absolute;
+    background: red;
+    width: 50px;
+    top: 50px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+li:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(15px);
+    opacity: 2;
+    background:crimson;
+    border-radius: 30px;
+
+}
+li 
+{
+    padding: 19px 35px;
+    font-size: 22px;
+    font-weight: bold;
+    color: brown;
+    font-family:Sitka Display;
+}
+li a
+{
+    text-decoration: none;
+    color:brown;
+}
+li a:hover
+{
+    color: brown;
+}
+#logo
+{
+    margin-top: -8.5%;
+    margin-left: 4%;
+    width: 190px;
+}
+marquee
+{
+    position: absolute;
+    top: 664px;
+    left: 10px;
+    font-size: 23px;
+    letter-spacing: 12px;
+    font-family:'Gabriola';
+    font-weight: bold;
+    color:crimson;
+}
+#slide
+{
+    
+    margin-top: 0.1%;
+    width: 1240px;
+    height: 590px;
+    margin-left: 65px;
+    border-radius: 15px;
+    z-index: -1;
+}
+h1
+{
+    position: absolute;
+    color: white;
+    top: 150px;
+    left: 180px;
+    font-size: 55px;
+    font-family: Gabriola;
+}
+p
+{
+    position: absolute;
+    color: white;
+    top: 290px;
+    left: 180px;
+    font-size: 20px;
+    font-family: Gabriola;
+}
+#pre
+{
+    margin-top: 550px;
+}
+#next
+{
+    position: relative;
+    left: 978px;
+    top: 275px;
+}
+button
+{
+    position: absolute;
+    top: 370px;
+    left: 180px;
+    border-radius: 50px;
+    outline: none;
+    color: blueviolet;
+    width: 140px;
+    height: 45px;
+    text-transform: capitalize;
+    font-family: Harrington;
+ 
+}
+button a
+{
+    text-decoration: none;
+    color: blueviolet;
+}
+#log
+{
+    margin-top: -358px;
+    margin-left: 1040px;
+    z-index: 2;
+    width: 60px;
+    height: 40px;
+    color: red;
+    cursor: url("./Help\ Select.cur");
+    font-family: cursive;
+    border-radius: 10px;
+}
+
+#shop
+{
+    position: absolute;
+    width: 65px;
+    top: -5px;
+    left: 1130px;
+    cursor: pointer;
+}
+#home
+{
+    cursor: pointer;
+}
+h2::before
+{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 450px;
+    top: 50px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+h2:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(15px);
+    opacity: 2;
+    background:white;
+    border-radius: 30px;
+
+}
+h2
+{
+    position: absolute;
+    top: 670px;
+    left: 470px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 35px;
+    z-index: 3;
+    color: black;
+
+}
+
+#man
+{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 750px;
+    left: 73px;
+    border-radius: 10px;
+}
+#bake
+{
+    position: absolute;
+    top: 765px;
+    left: 380px;
+    font-size: 33px;
+    width: 940px;
+    color: black;
+}
+h4::before
+{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 450px;
+    top: 50px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+h4:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(15px);
+    opacity: 2;
+    background:white;
+    border-radius: 30px;
+
+}
+h4
+{
+    position: absolute;
+    color: black;
+    top: 1130px;
+    left: 470px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.blog
+{
+    position: absolute;
+    top: 1240px;
+    height: 600px;
+    width: 1320px;
+    left: 5px;
+}
+h5::before
+{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 450px;
+    top: 50px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+h5:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(15px);
+    opacity: 2;
+    background:white;
+    border-radius: 30px;
+
+}
+h5
+{
+    position: absolute;
+    color: black;
+    top: 1930px;
+    left: 470px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#slides
+{
+   margin-top: 2000px;
+   margin-left: 200px;
+   width: 300px;
+   height: 300px;
+   top: 2100px;
+   z-index: 3;
+}
+.box2
+{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background: transparent;
+    top: 1470px;
+    overflow: hidden;
+}
+#title
+{
+     position: absolute;
+     color: black;
+     left: 10px;
+     top: 269px;
+     font-size: 17px;
+     font-family: "Trirong";
+}
+.back
+{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    margin-top: -530px;
+    margin-left: 1297px;
+    z-index: 6;
+    cursor: pointer;
+}
+#go
+{
+    position: absolute;
+    top: 380px;
+    left:7px;
+}
+#butter
+{
+    position: absolute;
+    color: black;
+    z-index: 5;
+}
+.box3
+{
+    position: absolute;
+    left: 500px;
+    top: 2132px;
+}
+.box4
+{
+    position: absolute;
+    left: 979px;
+    top: 2132px;
+}
+.box5
+{
+    position: absolute;
+    top: 2827px;
+    left:18px;
+}
+.one
+{
+    position: absolute;
+    top: 0px;
+    left:465px;
+}
+.two
+{
+    position: absolute;
+    left: 500px;
+    top: 1px;
+}
+.box6
+{
+    position: relative;
+}
+h4::before
+{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 450px;
+    top: 50px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+h4:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(15px);
+    opacity: 2;
+    background:crimson;
+    border-radius: 30px;
+
+}
+.video
+{
+    position: absolute;
+    top:150px;
+    left: 30px;
+    color: black;
+}
+.make
+{
+    
+    width: 400px;
+    height: 366px;
+    margin-top: 290px;
+    margin-left: -460px;
+}
+.makes
+{
+    position: absolute;
+    top: 290px;
+    left: 30px;
+    width: 760px;
+    font-size: 32px;
+    color: black;
+}
+.box7
+{
+    position: relative;
+    top: 290px;
+    left: -80px;
+    width: 600px;
+    height: 400px;
+    background: lightgrey;
+    border-radius: 50px;
+}
+.Contact
+{
+position: absolute;
+   margin-top:710px;
+    margin-left: -50px;
+    color: black;
+    z-index: 6;
+}
+input
+{
+    position: absolute;
+    left: 240px;
+    width: 230px;
+    height: 40px;
+    margin-top: 60px;
+    border-radius: 1px;
+}
+label
+{
+    position: absolute;
+    left: 150px;
+    margin-top: 70px;
+}
+#info
+{
+    position: absolute;
+    left: 250px;
+    top: 340px;
+}
+@media screen and (max-width:767px)
+{
+    body
+    {
+        background: white;
+    }
+    #container
+    {
+        position: relative;
+        background: rgba(245, 222, 179, 0.86);
+        width: 379px;
+        height: 65px;
+        left: -30px;
+        top: -5px;
+        border-radius: 2px;
+
+    }
+ul
+{
+    position: absolute;
+   margin-left: 12%;
+   display: flex;
+   list-style: none;
+}
+li 
+{
+    padding: 32px 6.6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: brown;
+    font-family:Sitka Display;
+}
+li::before
+{
+    content: "";
+    position: absolute;
+    background: red;
+    width: 19px;
+    top: 50px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+li:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(5px);
+    opacity: 2;
+    background:crimson;
+    border-radius: 30px;
+
+}
+#logo
+{
+    position: absolute;
+    margin-top: -1.5%;
+    margin-left: 7%;
+    width:50px;
+    height:90px;
+}
+#log
+{
+    margin-top: -353px;
+    margin-left: 560px;
+    z-index: 2;
+    width: 80px;
+    height: 40px;
+    color: red;
+    font-family: cursive;
+    border-radius: 10px;
+}
+#shop
+{
+    position: absolute;
+    width: 45px;
+    top: 13px;
+    left: 580px;
+    cursor: pointer;
+}
+#slide
+{
+    
+    margin-top: 0.1%;
+    width: 340px;
+    height: 220px;
+    margin-left: 5px;
+    border-radius: 15px;
+    z-index: -1;
+}
+#pre
+{
+    margin-top: 550px;
+    margin-left: -61px;
+}
+#next
+{
+    position: relative;
+    left: 268px;
+    top: 275px;
+}
+marquee
+{
+
+    position: absolute;
+    top: 286px;
+    left: -10px;
+    font-family:Fixedsys ;
+    font-weight: bold;
+    color:crimson;
+    font-size: 12px;
+}
+h1
+{
+    position: absolute;
+    color: white;
+    top: 90px;
+    left: 20px;
+    font-size: 19px;
+    font-family: "Trirong";
+}
+p
+{
+    position: absolute;
+    color: white;
+    top: 140px;
+    left: 20px;
+    font-size:7px;
+    font-family: "Trirong";
+}
+button
+{
+    position: absolute;
+    top: 170px;
+    left: 20px;
+    border-radius: 10px;
+    outline: none;
+    color: blueviolet;
+    width: 70px;
+    font-size:10px;
+    height: 23px;
+    text-transform: capitalize;
+    font-family: "Trirong";
+ 
+}
+.back
+{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    margin-top: -230px;
+    margin-left: 320px;
+    z-index: 6;
+    cursor: pointer;
+}
+h2
+{
+    position: absolute;
+    top: 280px;
+    left: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 3;
+    color: black;
+
+}
+#man
+{
+    position: absolute;
+    width: 120px;
+    height: 150px;
+    top: 350px;
+    left: 5px;
+    border-radius: 10px;
+}
+#bake
+{
+    position: absolute;
+    top: 350px;
+    left: 130px;
+    width:210px;
+    font-size: 10px;
+    color: black;
+}
+h4
+{
+    position: absolute;
+    color: black;
+    top: 560px;
+    left: 59px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.blog
+{
+    position: absolute;
+    top: 620px;
+    left: 5px;
+    height: 180px;
+    width: 340px;
+}
+h5
+{
+    position: absolute;
+    color: black;
+    top: 870px;
+    left: 59px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.box2
+{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background: transparent;
+    top: 720px;
+    left:-12px;
+    overflow: hidden;
+}
+
+.box3
+{
+    position: absolute;
+    left: -10px;
+    top: 1505px;
+}
+.box4
+{
+    position: absolute;
+    left: -10px;
+    top: 2010px;
+}
+.box5
+{
+    position: absolute;
+    left: -10px;
+    top: 2510px;
+}
+.one
+{
+    position: absolute;
+     left: 0px;
+    top: 500px;
+}
+.two
+{
+    position: absolute;
+    left: 0px;
+    top: 500px;;
+}
+.box6
+{
+    position: relative;
+}
+.video
+{
+    position: absolute;
+    top:550px;
+    left: 75px;
+    font-size: 20px;
+    color: black;
+      font-weight:bold ;
+}
+.make
+{
+    position: absolute;
+    width: 270px;
+    height: 200px;
+    top: 300px;
+    left:510px;
+}
+.makes
+{
+    position: absolute;
+    top: 820px;
+    left: 40px;
+    font-size: 15px;
+    width: 320px;
+    color: black;
+}
+.box7
+{
+    position: relative;
+    top: 1260px;
+    margin-left: 95px;
+    width: 340px;
+    height: 370px;
+    background: lightgrey;
+    border-radius: 10px;
+}
+.Contact
+{
+position: absolute;
+   margin-top:1090px;
+    margin-left: 120px;
+    color: black;
+    z-index: 6;
+    font-weight:bold;
+}
+input
+{
+    position: absolute;
+    left: 110px;
+    width: 230px;
+    height: 40px;
+    margin-top: 60px;
+    border-radius: 1px;
+}
+label
+{
+    position: absolute;
+    left: 10px;
+    margin-top: 70px;
+}
+#info
+{
+    position: absolute;
+    left: 130px;
+    top: 310px;
+    width:100px;
+    height:40px;
+}
+
+
+#log
+{
+    display: none;
+    margin-top: -358px;
+    margin-left: -40px;
+    z-index: 2;
+    width: 60px;
+    height: 40px;
+    color: red;
+    font-family: cursive;
+    border-radius: 10px;
+}
+
+#shop
+{
+    display: none;
+    position: absolute;
+    width: 65px;
+    top: -5px;
+    left: -10px;
+    cursor: pointer;
+}
+h4::before
+{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 150px;
+    top: 30px;
+    height: 3px;
+   opacity: 0;
+   transition: 1s ease-in;
+
+}
+h4:hover::before
+{
+    transition: 1s ease-in;
+    transform: translateX(15px);
+    opacity: 2;
+    background:crimson;
+    border-radius: 30px;
+
+}
+}
+
+    </style>
+</head>
+<body>
+<div id="container">
+    
+<ul>
+    <li id="home">Home</li></a>
+    <li><a href="#about">About </li></a>
+    <li><a href="#product">Product</li></a>
+    <li><a href="#fall">Gallery</li></a>
+    <li><a href="#vid">Making</li></a>
+    <li><a href="#contact">Contact</li></a>
+</ul>
+<img src="https://i.ibb.co/tx1w4Hm/logo1.png" alt="" id="logo">
+
+
+</div>
+<marquee >
+    &#128509;Great Diwali Offer 30% in Every Cake Orders..&#128151;
+</marquee>
+<div class="box">
+   
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" data-bs-interval="2000"> 
+            <img src="https://i.ibb.co/rMW6RC1/img1.jpg" class="d-block w-100px" alt="..." id="slide">
+          </div>
+          <div class="carousel-item"  data-bs-interval="2000">
+            <img src="https://i.ibb.co/5kBS8n3/img4.jpg" class="d-block w-100px" alt="..." id="slide">
+          </div>
+          <div class="carousel-item"  data-bs-interval="000">
+            <img src="https://i.ibb.co/CbGGMfG/img5.jpg" class="d-block w-100px" alt="..." id="slide">
+          </div>
+          <div class="carousel-item active"  data-bs-interval="000">
+            
+            <h1>Quality Products...<br>
+                with sweet,eggs & breads
+            </h1>
+            <p>This drastic appeal for baked goods promated baking all <br>Thoughtout europe and expanded into the eastern parts of asia</p>
+            <button><a href="index1.html" target="_blank">Shop Now</button></a>
+            <img src="https://i.ibb.co/BP3JgZg/img8.jpg" class="d-block w-100px" alt="..." id="slide">
+          </div>
+          <div class="carousel-item"  data-bs-interval="000">
+            <img src="https://i.ibb.co/Gc26F1L/img3.jpg" class="d-block w-100px" alt="..." id="slide">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" id="pre"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true" id="next"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <h2 id="about">About Us Our Cake Shop</h2>
+        <p id="bake">Baked goods have been around for thousdands of years.<br>
+         the art of baking was developed early during Roman Empire.<br>
+         it was a highly famous art as roman citizens loved baked goods.<br>
+         the bakery includes a coffee bar and full lunch menu.experince new paltz!vist the bakery.
+         people known since 1981 for great bagels...
+         
+        </p>
+        <img src="https://i.ibb.co/NFcdQ4s/man.jpg" alt="" id="man">
+        <a href="#home">
+        <img src="https://i.ibb.co/zQzs0vJ/back.png"  class="back" id="home" title="click Me" >
+        </a>
+       
+       <h4 id="product">Our Papulor Products</h4>   
+       <img src="https://i.ibb.co/42h7YRw/img9.png" alt="" class="blog">
+       <h5 id="fall">Fall Baking Gallery</h5>
+      </div>
+      <button id="log" >
+        Login
+    </button>
+    <img src="https://i.ibb.co/k6JJG3V/shop.png" alt="" id="shop"> 
+    
+    <div class="box2">
+        <div class="card" style="width: 250px; left: 63px; height: 430px; border-radius: 10px;background: lightgray; margin-top: 2px;">            
+        <img class="card-img-top" src="https://i.ibb.co/hBrBTmR/n2.jpg" alt="Card image cap" style="width: 239px;height: 255px;border-radius: 12px;margin-left: 4px;margin-top: 10px;">
+            <div class="card-body">
+              <p class="card-text" id="title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="go">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="box3">
+        <div class="card" style="width: 250px; left: 63px; height: 430px; border-radius: 10px;background: lightgray; margin-top: 2px;">  
+            <img class="card-img-top" src="https://i.ibb.co/h2vCQPg/n3.jpg" alt="Card image cap" style="width: 239px;height: 255px;border-radius: 12px;margin-left: 4px;margin-top: 10px;">
+            <div class="card-body">
+              <p class="card-text" id="title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="go">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="box4">
+       <div class="card" style="width: 250px; left: 63px; height: 430px; border-radius: 10px;background: lightgray; margin-top: 2px;">  
+            <img class="card-img-top" src="https://i.ibb.co/kx8wwZJ/n5.jpg" alt="Card image cap" style="width: 239px;height: 255px;border-radius: 12px;margin-left: 4px;margin-top: 10px;">
+            <div class="card-body">
+              <p class="card-text" id="title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="go">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="box5">
+       <div class="card" style="width: 250px; left: 63px; height: 430px; border-radius: 10px;background: lightgray; margin-top: 2px;">  
+            <img class="card-img-top" src="https://i.ibb.co/Kr5FtgX/n6.jpg" alt="Card image cap" style="width: 239px;height: 255px;border-radius: 12px;margin-left: 4px;margin-top: 10px;">
+            <div class="card-body">
+              <p class="card-text" id="title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary" id="go">Go somewhere</a>
+            </div>
+    </div>
+   <div class="one">
+   <div class="card" style="width: 250px; left: 63px; height: 430px; border-radius: 10px;background: lightgray; margin-top: 2px;">  
+      <img class="card-img-top" src="https://i.ibb.co/30wcJxw/n4.jpg" alt="Card image cap" style="width: 239px;height: 255px;border-radius: 12px;margin-left: 4px;margin-top: 10px;">
+      <div class="card-body">
+        <p class="card-text" id="title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary" id="go">Go somewhere</a>
+      </div>
+   </div>
+   <div class="two">
+    <div class="card" style="width: 250px; left: 63px; height: 430px; border-radius: 10px;background: lightgray; margin-top: 2px;">  
+      <img class="card-img-top" src="https://i.ibb.co/3stx44s/img7.jpg" alt="Card image cap" style="width: 239px;height: 255px;border-radius: 12px;margin-left: 4px;margin-top: 10px;">
+      <div class="card-body">
+        <p class="card-text" id="title">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary" id="go">Go somewhere</a>
+      </div>
+   </div>
+ </div>
+ 
+ <div class="box6">
+    <h1 class="video" id="vid">Our Cake Making Video</h1>
+    <video src="./video.mp4" controls autoplay muted class="make">
+        
+    </video>
+    <p class="makes">A basic flour mixture serves as the foundation for sweet and rich cakes and what are known as little cakes, called cookies, and their savory cousins being quick-breads and yeast breads. Basic ingredients for made-from-scratch cake recipes often include flour, sweetener (sugar), fat (butter, vegetable oil), liquid (milk), leavening agent (steam, beaten eggs, baking powder and/or baking soda), and flavorings (salt, vanilla extract). Cakes can also be purchased ready-made or baked with packaged mixes that come ready to be combined with water, eggs and vegetable oil.  </p>
+    <h1 class="Contact" id="contact">
+        Contact Us
+    </h1> 
+</div>
+
+<div class="box7">
+     <form action="mailto:dhanushdavid50@gmail.com">
+     <label>NAME:</label> 
+      <input type="text" name="" placeholder="DHANUSH N" disabled><br><br><br><br>
+      <label>EMAIL:</label> 
+
+      <input type="email" name="" id="" placeholder="dhanushdavid50@gmail.com" disabled><br><br><br><br>
+      <label>CONTACT:</label> 
+
+      <input type="number" name="" id="" placeholder="7339028177" disabled><br><br><br><br>
+      <button class="btn btn-success" id="info" >
+        More Info
+      </button>
+  
+
+
+
+    </form>
+</div>
+</div>
+<script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
